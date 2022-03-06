@@ -1,0 +1,49 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "import/extensions": "off",
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-fragments": "off",
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            {
+                "functions":  false, "classes":  false, "variables": false
+            }
+        ],
+        "prettier/prettier": [
+            "error", {
+                "endOfLine": "auto"
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
